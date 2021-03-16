@@ -1,0 +1,207 @@
+{
+  "flowError": {
+    "chatGroupId": 1,
+    "text": "Vixiii deu erro"
+  },
+  "conversationFlow": {
+    "contentType": 0,
+    "text": [
+      "Olá sou movibot"
+    ],
+    "next": {
+      "contentType": 1,
+      "text": [
+        "Eu serei seu atendente",
+        "Espero conseguir resolver seu problemas",
+        "Bora lá"
+      ],
+      "next": {
+        "contentType": 3,
+        "text": [
+          "Qual é seu problema?"
+        ],
+        "options": [
+          {
+            "text": "Financeiro",
+            "next": {
+              "contentType": 3,
+              "text": [
+                "Referente ao departamento financeiro o que faz mas sentido pra você"
+              ],
+              "options": [
+                {
+                  "text": "Segunda via do boleto",
+                  "next": {
+                    "contentType": 2,
+                    "text": [
+                      "segue o link"
+                    ],
+                    "uri": "https://www.claro.com.br/atendimento/2-via-de-conta",
+                    "next": {
+                      "contentType": 3,
+                      "text": [
+                        "Seu problema foi resolvido?"
+                      ],
+                      "options": [
+                        {
+                          "text": "Sim",
+                          "next": {
+                            "contentType": 4,
+                            "text": [
+                              "Obrigado até a proxima"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Não",
+                          "next": {
+                            "contentType": 5,
+                            "text": [
+                              "Você será tranferido para equipe financeira"
+                            ],
+                            "chatGroupId": 3
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "text": "Erro na fatura",
+                  "next": {
+                    "contentType": 5,
+                    "text": [
+                      "Você será tranferido para equipe financeira"
+                    ],
+                    "chatGroupId": 3
+                  }
+                },
+                {
+                  "text": "Cadastrar nova forma de pagamento",
+                  "next": {
+                    "contentType": 2,
+                    "text": [
+                      "segue o link"
+                    ],
+                    "uri": "https://www.claro.com.br/atendimento/2-via-de-conta",
+                    "next": {
+                      "contentType": 3,
+                      "text": [
+                        "Seu problema foi resolvido?"
+                      ],
+                      "options": [
+                        {
+                          "text": "Sim",
+                          "next": {
+                            "contentType": 4,
+                            "text": [
+                              "Obrigado até a proxima"
+                            ]
+                          }
+                        },
+                        {
+                          "text": "Não",
+                          "next": {
+                            "contentType": 5,
+                            "text": [
+                              "Você será tranferido para equipe financeira"
+                            ],
+                            "chatGroupId": 3
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "text": "Logistico",
+            "next": {
+              "contentType": 3,
+              "text": [
+                "Referente ao departamento logistico o que faz mas sentido pra você"
+              ],
+              "options": [
+                {
+                  "text": "Contratar Serviço",
+                  "next": {
+                    "contentType": 5,
+                    "text": [
+                      "Você será tranferido para equipe vendas"
+                    ],
+                    "chatGroupId": 4
+                  }
+                },
+                {
+                  "text": "Rastrear produto",
+                  "next": {
+                    "contentType": 2,
+                    "text": [
+                      "segue o link"
+                    ],
+                    "uri": "https://www2.correios.com.br/sistemas/rastreamento/default.cfm",
+                    "next": {
+                      "contentType": 4,
+                      "text": [
+                        "Obrigado até a proxima"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "text": "Duvidas",
+            "next": {
+              "contentType": 2,
+              "uri": "www.google.com",
+              "text": [
+                "segue o link de duvidas"
+              ],
+              "next": {
+                "contentType": 3,
+                "text": [
+                  "Seu problema foi resolvido?"
+                ],
+                "options": [
+                  {
+                    "text": "Sim",
+                    "next": {
+                      "contentType": 4,
+                      "text": [
+                        "Obrigado até a proxima"
+                      ]
+                    }
+                  },
+                  {
+                    "text": "Não",
+                    "next": {
+                      "contentType": 5,
+                      "text": [
+                        "Você será tranferido para o suporte"
+                      ],
+                      "chatGroupId": 2
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "text": "Conversar com um atentende",
+            "next": {
+              "contentType": 5,
+              "text": [
+                "Você será tranferido para o suporte"
+              ],
+              "chatGroupId": 2
+            }
+          }
+        ]
+      }
+    }
+  }
+}
