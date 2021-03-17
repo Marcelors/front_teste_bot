@@ -86,7 +86,10 @@ export default {
         )
         .then((response) => {
           console.log(response);
-          this.startConversation();
+          this.$alert("Cadastrado com sucesso", "Info", {
+            confirmButtonText: "OK",
+          });
+          //this.startConversation();
         })
         .catch((err) => {
           debugger;

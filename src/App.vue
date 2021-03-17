@@ -4,20 +4,27 @@
       <el-tab-pane label="Bot">
         <bot :token="token" v-on:createBot="setBotId"></bot
       ></el-tab-pane>
-      <el-tab-pane label="Chat"><chat :botId="botId" :token="token"></chat></el-tab-pane>
+      <el-tab-pane label="Chat"
+        ><chat :botId="botId" :token="token"></chat
+      ></el-tab-pane>
+      <el-tab-pane label="Chat-SDK"
+        ><chat-sdk :botId="botId"></chat-sdk
+      ></el-tab-pane>
     </el-tabs>
   </div>
 </template>
 
 <script>
 import Bot from "./views/bot/form";
-import Chat from "./views/chat"
+import Chat from "./views/chat";
+import ChatSdk from "./views/chat_skd/Index";
 
 export default {
   name: "App",
   components: {
     Bot,
-    Chat
+    Chat,
+    ChatSdk,
   },
   data() {
     return {
